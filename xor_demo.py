@@ -52,6 +52,7 @@ key_bit_string = toBin(key)
 
 encrypted_message = xor(message_bit_string, key_bit_string)
 print("encrypted message in binary = " + encrypted_message + '\n')
+print("encrypted message in ASCII = " + toAsc(encrypted_message) + '\n')
 
 print("decrypt message with the password")
 decrypted_message = xor(encrypted_message, key_bit_string)
