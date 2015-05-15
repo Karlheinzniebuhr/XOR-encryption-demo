@@ -2,12 +2,26 @@
 
 Encrypt-Decrypt message with XOR
 Proof of concept by Karlheinz Niebuhr
+I stole some code/comments from Kenny Meyer's version
 
 """
+
+# A cipher has a:
+# - message
+# - key
+# - cypher text
+#
+# To be valid the following condition must be true:
+#
+#   E(k, D(k, c)) = m
+
+
 import random
 import string
 
-
+# XOR the message and key
+# Exclusive disjunction or exclusive or is a logical operation that outputs true whenever both inputs differ (one is true, the other is false)
+# http://en.wikipedia.org/wiki/Exclusive_or
 def xor(a,b):
 	bits = ''
 	if not len(a) == len(b):
